@@ -20,3 +20,12 @@ model.compile(optimizer = 'sgd', loss = 'categorical_crossentropy', metrics=['ac
 
 # Fit the model
 model.fit(predictors, target)
+
+# Calculate predictions: predictions
+predictions = model.predict(pred_data)
+
+# Calculate predicted probability of survival: predicted_prob_true
+predicted_prob_true = predictions[:,1]
+
+# print predicted_prob_true
+print(predicted_prob_true)
